@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
   
   //MARK: Outlets
   @IBOutlet weak var enterAmountTextField: UITextField!
