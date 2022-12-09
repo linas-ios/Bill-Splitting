@@ -27,6 +27,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="0%">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lw1-NW-DZ5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPw-wI-38e">
                                         <rect key="frame" x="74.666666666666657" y="0.0" width="74.666666666666657" height="50"/>
@@ -37,6 +40,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="10%">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bH5-ce-QZi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOC-gM-ngY">
                                         <rect key="frame" x="149.33333333333331" y="0.0" width="74.666666666666686" height="50"/>
@@ -47,6 +53,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="20%">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CwR-AD-7XT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -69,6 +78,9 @@
                                             <constraint firstAttribute="height" constant="29" id="T8g-k3-Y86"/>
                                             <constraint firstAttribute="width" constant="93" id="V7Z-eE-dHL"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="steppedValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="blu-di-Kzl"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                             </stackView>
@@ -114,6 +126,9 @@
                                         <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqm-O8-MIr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -133,6 +148,13 @@
                             <constraint firstItem="IWW-UA-dlq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wgK-j2-DB1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterAmountTextField" destination="ncf-WM-BnA" id="fRp-af-Cpy"/>
+                        <outlet property="splitNumberLabel" destination="Sal-eC-HRN" id="lK0-6m-aUb"/>
+                        <outlet property="tenPercentageButton" destination="jPw-wI-38e" id="sAl-uq-vmU"/>
+                        <outlet property="twentyPercentageButton" destination="KOC-gM-ngY" id="lR6-Ap-4Pi"/>
+                        <outlet property="zeroPercentageButton" destination="DVE-ig-MqT" id="3mk-iU-1NP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
