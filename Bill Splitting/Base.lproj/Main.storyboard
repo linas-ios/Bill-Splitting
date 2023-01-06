@@ -16,48 +16,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-UA-dlq">
-                                <rect key="frame" x="84.666666666666686" y="251.66666666666663" width="224" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IWW-UA-dlq">
+                                <rect key="frame" x="108.66666666666669" y="251.66666666666663" width="176" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVE-ig-MqT">
-                                        <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Pn2-nO-I5t"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="0%">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                            <color key="baseForegroundColor" systemColor="tintColor"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="0%">
+                                            <color key="titleColor" systemColor="tintColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lw1-NW-DZ5"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPw-wI-38e">
-                                        <rect key="frame" x="74.666666666666657" y="0.0" width="74.666666666666657" height="50"/>
+                                        <rect key="frame" x="56.999999999999986" y="0.0" width="48" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Vit-jz-qYb"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="10%">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="10%"/>
                                         <connections>
                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bH5-ce-QZi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KOC-gM-ngY">
-                                        <rect key="frame" x="149.33333333333331" y="0.0" width="74.666666666666686" height="50"/>
+                                        <rect key="frame" x="125" y="0.0" width="51" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="AEe-20-8rE"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="20%">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="20%"/>
                                         <connections>
                                             <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CwR-AD-7XT"/>
                                         </connections>
@@ -133,6 +128,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lqm-O8-MIr"/>
+                                    <segue destination="Qy4-R0-CHM" kind="show" identifier="goToResult" id="ooJ-Eu-9K6"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -170,11 +166,11 @@
             <objects>
                 <viewController id="Qy4-R0-CHM" customClass="ResultsViewController" customModule="Bill_Splitting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0qy-ie-VAs">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3W-2g-TO6">
-                                <rect key="frame" x="50" y="376" width="293" height="100"/>
+                                <rect key="frame" x="50" y="341.66666666666669" width="293" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Szi-eM-ryz"/>
                                 </constraints>
@@ -183,7 +179,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RE-5d-G2K">
-                                <rect key="frame" x="0.0" y="236" width="393" height="100"/>
+                                <rect key="frame" x="0.0" y="201.66666666666666" width="393" height="99.999999999999972"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="iXk-eW-n3C"/>
                                 </constraints>
@@ -192,13 +188,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7B-vt-sF4">
-                                <rect key="frame" x="110.66666666666669" y="181" width="172" height="30"/>
+                                <rect key="frame" x="110.66666666666669" y="146.66666666666666" width="172" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXY-pH-CUL">
-                                <rect key="frame" x="96.666666666666686" y="544" width="200" height="50"/>
+                                <rect key="frame" x="96.666666666666686" y="509.66666666666674" width="200" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="HOO-As-xzY"/>
                                     <constraint firstAttribute="width" constant="200" id="pLD-vf-c5W"/>
@@ -230,6 +226,7 @@
                             <constraint firstItem="2RE-5d-G2K" firstAttribute="leading" secondItem="8SA-TT-w9s" secondAttribute="leading" id="vuW-y4-JHo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fe0-8f-gy3"/>
                     <connections>
                         <outlet property="settingsLabel" destination="w3W-2g-TO6" id="lS5-2U-0KR"/>
                         <outlet property="totalLabel" destination="2RE-5d-G2K" id="WcY-aw-KJB"/>
